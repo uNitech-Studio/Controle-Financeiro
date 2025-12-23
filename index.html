@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle Financeiro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Controle Financeiro</h1>
+    </div>
+
+    <div class="saldo">
+      <p>Saldo Atual: <span id="saldo">R$ 0,00</span></p>
+    </div>
+
+    <form id="form">
+      <input type="text" id="descricao" placeholder="Descrição" required>
+      <input type="number" id="valor" placeholder="Valor" step="0.01" min="0.01" required>
+      <select id="tipo">
+        <option value="entrada">Entrada</option>
+        <option value="saida">Saída</option>
+      </select>
+      <select id="categoria" disabled>
+        <option value="">Categoria (apenas para saídas)</option>
+        <option value="saude">Saúde</option>
+        <option value="lazer">Lazer</option>
+        <option value="alimentacao">Alimentação</option>
+        <option value="transporte">Transporte</option>
+        <option value="outros">Outros</option>
+      </select>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <ul id="transacoes"></ul>
+
+    <div class="chart-container">
+      <h2>Gastos por Categoria</h2>
+      <canvas id="expenseChart"></canvas>
+    </div>
+<br>
+    <button id="generate-report">Gerar Relatório</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
