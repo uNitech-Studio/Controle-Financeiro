@@ -23,12 +23,5 @@ JavaScript (puro, sem frameworks!)
 
 Biblioteca jsPDF para geração do PDF
 
-🧠 Ideal para:
-Quem quer entender para onde o dinheiro está indo 🕵️‍♂️
-
-Estudantes de programação treinando projetos com JS
-
-Portfólios que precisam de projetos úteis e bem-feitos ✅
-
 💬 Organize suas finanças. Visualize seus gastos. Tome o controle.
 Tudo no seu navegador. Sem complicações. 🧾🧠
